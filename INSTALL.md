@@ -27,3 +27,26 @@ nginx version: nginx/1.26.0
 ```
 
 到此，nginx安装完成。
+
+# grpc
+
+拉取源码:
+```sh
+git clone https://github.com/grpc/grpc.git
+```
+
+拉取依赖子仓库(需要确保所有资源拉取成功):
+```sh
+cd grpc
+git submodule init
+git submodule sync
+git submodule update
+```
+
+编译:
+```sh
+mkdir build
+cd build
+cmake ..
+sudo make -j4 && make install
+```
